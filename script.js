@@ -1,25 +1,23 @@
 (function() {
-    // ربط الحساب بمفتاحك العام
-    emailjs.init("0Veq71X19eL9ZabFX");
+    emailjs.init("0Veq71X19eL9ZabFX"); // المفتاح العام الصحيح
 })();
 
 function sendMail() {
-    var serviceID = "service_44mpv0i";
-    var templateID = "template_contact";
+    var serviceID = "service_44mpv0i"; // معرف الخدمة الصحيح
+    var templateID = "template_contact"; // تأكد من مطابقة الاسم في صفحة القوالب
 
-    // جلب البيانات من الحقول في HTML
+    // سحب القيم من مربعات النص في موقعك
     var params = {
-        name: document.querySelector("input[type='text']").value,
-        email: document.querySelector("input[type='email']").value,
-        message: document.querySelector("textarea").value
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
     };
 
     emailjs.send(serviceID, templateID, params)
-    .then(res => {
-        alert("تم إرسال طلب الشحن بنجاح! سنتواصل معك قريباً.");
+    .then(function(res) {
+        alert("تم إرسال طلبك بنجاح!");
     })
-    .catch(err => {
-        console.log("خطأ في الإرسال:", err);
-        alert("حدث خطأ، يرجى المحاولة لاحقاً.");
+    .catch(function(err) {
+        alert("فشل الإرسال: " + JSON.stringify(err));
     });
 }
