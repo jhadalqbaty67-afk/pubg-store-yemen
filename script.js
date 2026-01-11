@@ -1,29 +1,18 @@
-// Initialize EmailJS with your public key
 (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key from EmailJS
+    // ربط الحساب بمفتاحك العام
+    emailjs.init("0Veq71X19eL9ZabFX");
 })();
 
-// Handle email form submission
-document.getElementById('email-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+function sendMail(params) {
+    // المفاتيح التي استخرجناها من حسابك
+    var serviceID = "service_44mpv0i";
+    var templateID = "template_contact";
 
-    // Send the form using EmailJS
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this) // Replace with your service ID and template ID
-        .then(function() {
-            alert('تم إرسال الرسالة بنجاح!');
-        }, function(error) {
-            alert('حدث خطأ في الإرسال: ' + JSON.stringify(error));
-        });
-});
-
-// Optional: Add functionality for UC selection (if needed)
-document.querySelectorAll('.uc-option').forEach(function(option) {
-    option.addEventListener('click', function() {
-        // Remove selected class from all options
-        document.querySelectorAll('.uc-option').forEach(function(opt) {
-            opt.classList.remove('selected');
-        });
-        // Add selected class to clicked option
-        this.classList.add('selected');
+    emailjs.send(serviceID, templateID, params)
+    .then(res => {
+        alert("تم إرسال طلب الشحن بنجاح! سنتواصل معك قريباً.");
+    })
+    .catch(err => {
+        console.log("خطأ في الإرسال:", err);
     });
-});
+}
