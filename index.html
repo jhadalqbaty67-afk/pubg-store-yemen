@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شحن UC لـ PUBG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>شحن UC لـ PUBG</h1>
+        <p>اشحن عملتك في لعبة PUBG بسهولة وأمان</p>
+    </header>
+
+    <main>
+        <section class="uc-selection">
+            <h2>اختر كمية UC المطلوبة</h2>
+            <div class="uc-options">
+                <div class="uc-option" data-uc="60" data-price="5">
+                    <img src="صورة ببجي.jpg" alt="صورة ببجي" class="pubg-image">
+                    <div class="price-overlay">
+                        <h3>60 UC</h3>
+                        <p>5 دولار</p>
+                    </div>
+                </div>
+                <div class="uc-option" data-uc="325" data-price="25">
+                    <img src="صورة ببجي.jpg" alt="صورة ببجي" class="pubg-image">
+                    <div class="price-overlay">
+                        <h3>325 UC</h3>
+                        <p>25 دولار</p>
+                    </div>
+                </div>
+                <div class="uc-option" data-uc="660" data-price="50">
+                    <img src="صورة ببجي.jpg" alt="صورة ببجي" class="pubg-image">
+                    <div class="price-overlay">
+                        <h3>660 UC</h3>
+                        <p>50 دولار</p>
+                    </div>
+                </div>
+                <div class="uc-option" data-uc="1800" data-price="100">
+                    <img src="صورة ببجي.jpg" alt="صورة ببجي" class="pubg-image">
+                    <div class="price-overlay">
+                        <h3>1800 UC</h3>
+                        <p>100 دولار</p>
+                    </div>
+                </div>
+                <div class="uc-option" data-uc="120" data-price="10">
+                    <img src="صورة ببجي.jpg" alt="صورة ببجي" class="pubg-image">
+                    <div class="price-overlay">
+                        <h3>120 UC</h3>
+                        <p>10 دولار</p>
+                    </div>
+                </div>
+                <div class="uc-option" data-uc="3850" data-price="200">
+                    <img src="صورة ببجي.jpg" alt="صورة ببجي" class="pubg-image">
+                    <div class="price-overlay">
+                        <h3>3850 UC</h3>
+                        <p>200 دولار</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>طلب الشحن</h2>
+            <p>لطلب شحن UC، يرجى التواصل معنا عبر الواتساب على الرقم: <strong>730147869</strong></p>
+            <p>سنقوم بمعالجة طلبك بسرعة وأمان.</p>
+            <form>
+                <label for="game-code">كود اللعبة:</label>
+                <input type="text" id="game-code" name="game-code" placeholder="أدخل كود اللعبة هنا">
+            </form>
+            <h3>أو تواصل عبر البريد الإلكتروني</h3>
+            <form id="email-form">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+
+                <label for="message">الرسالة:</label>
+                <textarea id="message" name="message" placeholder="أدخل رسالتك" required></textarea>
+
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 شحن UC لـ PUBG. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
