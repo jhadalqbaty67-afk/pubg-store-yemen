@@ -1,12 +1,14 @@
 (function() {
-    emailjs.init("0Veq71X19eL9ZabFX"); // المفتاح العام الصحيح
+    // المفتاح العام من حسابك
+    emailjs.init("0Veq71X19eL9ZabFX");
 })();
 
 function sendMail() {
-    var serviceID = "service_44mpv0i"; // معرف الخدمة الصحيح
-    var templateID = "template_contact"; // تأكد من مطابقة الاسم في صفحة القوالب
+    // التأكد من معرف الخدمة ومعرف القالب
+    var serviceID = "service_44mpv0i";
+    var templateID = "template_contact";
 
-    // سحب القيم من مربعات النص في موقعك
+    // سحب البيانات من الحقول - تأكد أن الـ id في HTML مطابق لهذه الأسماء
     var params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -18,6 +20,6 @@ function sendMail() {
         alert("تم إرسال طلبك بنجاح!");
     })
     .catch(function(err) {
-        alert("فشل الإرسال: " + JSON.stringify(err));
+        alert("حدث خطأ في الإرسال: " + JSON.stringify(err));
     });
 }
